@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Archetype Created Web Application</display-name>
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+		<welcome-file>login.htm</welcome-file>
+		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/errorData.jsp</location>
+	</error-page>
+
+
+
+	<servlet>
+		<description></description>
+		<display-name>EventServlet</display-name>
+		<servlet-name>EventServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.EventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EventServlet</servlet-name>
+		<url-pattern>/events</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<display-name>RoomServlet</display-name>
+		<servlet-name>RoomServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomServlet</servlet-name>
+		<url-pattern>/rooms</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>RoomServlet</display-name>
+		<servlet-name>RoomServlet-calendar</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RoomServlet-calendar</servlet-name>
+		<url-pattern>/rooms/calendar</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<description>
+ 	</description>
+		<display-name>UserServlet</display-name>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/users</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>
+ 	</description>
+		<display-name>UserServlet</display-name>
+		<servlet-name>UserServlet-edit</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserServlet-edit</servlet-name>
+		<url-pattern>/users/editProfile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>
+ 	</description>
+		<display-name>UserServlet</display-name>
+		<servlet-name>UserServlet-update</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserServlet-update</servlet-name>
+		<url-pattern>/users/updateUser</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<display-name>LoginCheckServlet</display-name>
+		<servlet-name>LoginCheckServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.LoginCheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginCheckServlet</servlet-name>
+		<url-pattern>/LoginCheckServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet</servlet-name>
+		<url-pattern>/adminRooms</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet-new</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet-new</servlet-name>
+		<url-pattern>/adminRooms/newRoom</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet-insert</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet-insert</servlet-name>
+		<url-pattern>/adminRooms/insertRoom</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet-delete</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet-delete</servlet-name>
+		<url-pattern>/adminRooms/deleteRoom</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet-update</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet-update</servlet-name>
+		<url-pattern>/adminRooms/updateRoom</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet-edit</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet-edit</servlet-name>
+		<url-pattern>/adminRooms/editRoom</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>adminRoomServlet</display-name>
+		<servlet-name>adminRoomServlet-calendar</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminRoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminRoomServlet-calendar</servlet-name>
+		<url-pattern>/adminRooms/calendar</url-pattern>
+	</servlet-mapping>
+	
+	
+
+
+
+
+	<servlet>
+		<description></description>
+		<display-name>adminEventServlet</display-name>
+		<servlet-name>adminEventServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminEventServlet</servlet-name>
+		<url-pattern>/adminEvents</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminEventServlet</display-name>
+		<servlet-name>adminEventServlet-new</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminEventServlet-new</servlet-name>
+		<url-pattern>/adminEvents/newEvent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminEventServlet</display-name>
+		<servlet-name>adminEventServlet-insert</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminEventServlet-insert</servlet-name>
+		<url-pattern>/adminEvents/insertEvent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminEventServlet</display-name>
+		<servlet-name>adminEventServlet-delete</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminEventServlet-delete</servlet-name>
+		<url-pattern>/adminEvents/deleteEvent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminEventServlet</display-name>
+		<servlet-name>adminEventServlet-update</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminEventServlet-update</servlet-name>
+		<url-pattern>/adminEvents/updateEvent</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminEventServlet</display-name>
+		<servlet-name>adminEventServlet-edit</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminEventServlet-edit</servlet-name>
+		<url-pattern>/adminEvents/editEvent</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet</servlet-name>
+		<url-pattern>/adminUsers</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-new</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-new</servlet-name>
+		<url-pattern>/adminUsers/newUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-insert</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-insert</servlet-name>
+		<url-pattern>/adminUsers/insertUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-delete</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-delete</servlet-name>
+		<url-pattern>/adminUsers/deleteUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-update</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-update</servlet-name>
+		<url-pattern>/adminUsers/updateUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-edit</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-edit</servlet-name>
+		<url-pattern>/adminUsers/editUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-editProfile</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-editProfile</servlet-name>
+		<url-pattern>/adminUsers/editProfile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>adminUserServlet</display-name>
+		<servlet-name>adminUserServlet-changePassword</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.adminUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminUserServlet-changePassword</servlet-name>
+		<url-pattern>/adminUsers/change</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+	<servlet>
+		<description></description>
+		<display-name>GoingServlet</display-name>
+		<servlet-name>GoingServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.GoingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoingServlet</servlet-name>
+		<url-pattern>/going</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>GoingServlet</display-name>
+		<servlet-name>GoingServlet-insert</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.GoingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoingServlet-insert</servlet-name>
+		<url-pattern>/going/insertGoing</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>GoingServlet</display-name>
+		<servlet-name>GoingServlet-delete</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.GoingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoingServlet-delete</servlet-name>
+		<url-pattern>/going/deleteGoing</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>GoingServlet</display-name>
+		<servlet-name>GoingServlet-admin</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.GoingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoingServlet-admin</servlet-name>
+		<url-pattern>/adminGoing</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<description></description>
+		<display-name>InviteServlet</display-name>
+		<servlet-name>InviteServlet</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.InviteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InviteServlet</servlet-name>
+		<url-pattern>/invites</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>InviteServlet</display-name>
+		<servlet-name>InviteServlet-new</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.InviteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InviteServlet-new</servlet-name>
+		<url-pattern>/invites/newInvite</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>InviteServlet</display-name>
+		<servlet-name>InviteServlet-insert</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.InviteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InviteServlet-insert</servlet-name>
+		<url-pattern>/invites/insertInvite</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>InviteServlet</display-name>
+		<servlet-name>InviteServlet-delete</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.InviteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InviteServlet-delete</servlet-name>
+		<url-pattern>/invites/deleteInvite</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>InviteServlet</display-name>
+		<servlet-name>InviteServlet-accept</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.InviteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InviteServlet-accept</servlet-name>
+		<url-pattern>/invites/acceptInvite</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>InviteServlet</display-name>
+		<servlet-name>InviteServlet-admin</servlet-name>
+		<servlet-class>ro.iran.spectacole.servlets.InviteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InviteServlet-admin</servlet-name>
+		<url-pattern>/adminInvites</url-pattern>
+	</servlet-mapping>
+</web-app>
